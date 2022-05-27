@@ -40,10 +40,18 @@ def vvod(): #функция заполнения массива
 # print(round(max - min, 3))
 
 #4 Написать программу преобразования десятичного числа в двоичное
-N = int(input("Введите число: "))
-dvoich = []
-while N != 0:
-    dvoich.append(N%2)
-    N//=2
-for i in range(len(dvoich)):
-    print(dvoich[len(dvoich)-i-1], end='')
+# N = int(input("Введите число: "))
+# dvoich = []
+# while N != 0:
+#     dvoich.append(N%2)
+#     N//=2
+# for i in range(len(dvoich)):
+#     print(dvoich[len(dvoich)-i-1], end='')
+
+#Экстра 1 Написать программу преобразования двоичного числа в десятичное.
+N = input("Введите число: ")
+fin = 0
+step = 0
+for i in range(len(N)):
+    fin = fin + (2**(len(N)-i-1))*int(N[i])
+print(fin)
