@@ -49,8 +49,21 @@ def vvod(): #функция заполнения массива
 #     print(dvoich[len(dvoich)-i-1], end='')
 
 #Экстра 1 Написать программу преобразования двоичного числа в десятичное.
-N = input("Введите число: ")
-fin = 0
-for i in range(len(N)):
-    fin = fin + (2**(len(N)-i-1))*int(N[i])
-print(fin)
+# N = input("Введите число: ")
+# fin = 0
+# for i in range(len(N)):
+#     fin = fin + (2**(len(N)-i-1))*int(N[i])
+# print(fin)
+
+#Экстра 2 Создайте программу, которая будет играть в игру “коровы и быки” с пользователем.
+import random
+N = random.randint(1000, 9999)
+Zagadano = str(N)
+Raund = ["бык", "бык", "бык", "бык"]
+while Raund != ["корова", "корова", "корова", "корова"]:
+    Raund = ["бык", "бык", "бык", "бык"]
+    for i in range(4):
+        if(int(input()) == int(Zagadano[i])):
+            Raund[i] = "корова"
+    print(Raund)
+print("Вы угадали! Это число: ", N)
