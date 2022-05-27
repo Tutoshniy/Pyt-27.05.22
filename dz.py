@@ -25,17 +25,25 @@ def vvod(): #функция заполнения массива
 #3 В заданном списке вещественных чисел найдите разницу между 
 # максимальным и минимальным значением дробной
 
-list = []
-veshnums = []
-max = 0.0000000001
-min = 1
-n = int(input("Введите количество чисел: "))
-for i in range(n):                  #здесь наша функция не сработает,
-    list.append(float(input()))     #поэтому я написал новое
-    if (list[i]-int(list[i])) != 0:
-        veshnums.append(round(list[i]-int(list[i]), 3))
-for i in range(len(veshnums)):
-    if veshnums[i] < min: min = veshnums[i]
-    if veshnums[i] > max: max = veshnums[i]
-print(round(max - min, 3))
+# list = []
+# veshnums = []
+# max = 0.0000000001
+# min = 1
+# n = int(input("Введите количество чисел: "))
+# for i in range(n):                  #здесь наша функция не сработает,
+#     list.append(float(input()))     #поэтому я написал новое
+#     if (list[i]-int(list[i])) != 0:
+#         veshnums.append(round(list[i]-int(list[i]), 3))
+# for i in range(len(veshnums)):
+#     if veshnums[i] < min: min = veshnums[i]
+#     if veshnums[i] > max: max = veshnums[i]
+# print(round(max - min, 3))
 
+#4 Написать программу преобразования десятичного числа в двоичное
+N = int(input("Введите число: "))
+dvoich = []
+while N != 0:
+    dvoich.append(N%2)
+    N//=2
+for i in range(len(dvoich)):
+    print(dvoich[len(dvoich)-i-1], end='')
